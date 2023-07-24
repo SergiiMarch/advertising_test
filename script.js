@@ -5,11 +5,11 @@ console.log(boxEl);
 let counter = 11;
 setTimeout(() => {
   boxEl.style.display = "block";
-  setInterval(() => {
+  const id = setInterval(() => {
     counter -= 1;
     timerEl.textContent = counter;
     if (counter < 0) {
-      clearInterval();
+      clearInterval(id);
       boxEl.style.display = "none";
     }
   }, 1000);
